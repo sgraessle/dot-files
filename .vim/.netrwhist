@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/sgraessle/dev/kingdoms/crimecity/tools/crime_editor'
+let g:netrw_dirhist_2='/Users/sgraessle/dev/gh/Server/game/public/test.html'
+let g:netrw_dirhist_3='/Users/sgraessle/dev/gh/Server/game/public'
+let g:netrw_dirhist_4='/Users/sgraessle/dev/kingdoms/crimecity/server/public/assets/public/locale'
+let g:netrw_dirhist_5='/Users/sgraessle/dev/kingdoms/build/config/hosts'
+let g:netrw_dirhist_6='/Users/sgraessle/dev/family/Server/game/includes/util/Log'
