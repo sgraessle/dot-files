@@ -1,0 +1,43 @@
+ControlMaster auto
+ControlPath /tmp/ssh_mux_%h_%p_%r
+ForwardAgent yes
+
+host slots-dev
+hostname dev2-slots-01.zc2.zynga.com
+
+host slots-dev2
+hostname dev2-slots-02.zc2.zynga.com
+
+host stg-web staging-web
+hostname webslots-staging-web-fb-4.zc2.zynga.com
+
+host zcon slots-zcon
+hostname webslots-zcon-01.zc2.zynga.com
+
+host stg-rt staging-rt
+hostname webslots-staging-rt-server-0-11.zc2.zynga.com
+
+host bingo bingo-dev
+hostname s4hs-pkr-dev11
+
+host bingo-ps
+user poker
+hostname cas-ps-com-1.ca1.zynga.com
+
+host stage1
+user poker
+hostname s4hb-pkr-stage1.sv4.zynga.com
+
+host cas-web-1
+hostname cas-web-1.ca1.zynga.com
+
+host slices slices-web
+hostname family-dev-01.zc2.zynga.com
+
+host jenkins hudson slices-hudson
+hostname family-dev-02.zc2.zynga.com
+
+host github-ca
+hostname github-ca.corp.zynga.com
+user git
+IdentityFile ~/.ssh/git-rsa
