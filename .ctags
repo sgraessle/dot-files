@@ -1,6 +1,6 @@
 --recurse=yes
 --extra=+f
---langmap=html:+.ctp
+--langmap=html:+.tpl
 --exclude=webroot
 --exclude=.git_externals
 --exclude=.hg

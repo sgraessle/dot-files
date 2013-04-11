@@ -1,9 +1,17 @@
-call pathogen#infect()
-
-set showcmd
-set incsearch
-set ruler
 syntax on
+
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+Bundle 'tpope/vim-fugitive'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'scrooloose/nerdtree'
+Bundle 'mileszs/ack.vim'
+
 filetype plugin indent on
 
 " Put these in an autocmd group, so that we can delete them easily.
@@ -30,10 +38,6 @@ augroup vimrcEx
 	autocmd BufNewFile,BufRead *.ctp setfiletype php
 augroup END
 
-set smarttab softtabstop=4 shiftwidth=4 ts=4
-set ignorecase smartcase smartindent showmatch
-set tags=./tags,tags,/
-set hidden
 
 let mapleader = ","
 
@@ -52,30 +56,22 @@ nnoremap <C-l> <C-w>l
 nnoremap <leader>a :Ack
 nnoremap <leader>nt :NERDTree<cr>
 
-func GitGrep(...)
-  let save = &grepprg
-  set grepprg=git\ grep\ -n\ $*
-  let s = 'grep'
-  for i in a:000
-    let s = s . ' ' . i
-  endfor
-  exe s
-  let &grepprg = save
-endfun
-command -nargs=? G call GitGrep(<f-args>)
-
-" Run grep with the word under the cursor
-func GitGrepWord()
-  normal! "zyiw
-  call GitGrep('-w -e ', getreg('z'))
-endf
-nmap <C-x>G :call GitGrepWord()<CR>
-
-set scrolloff=3
 nmap <silent> <leader>n :silent :nohlsearch<CR>
 nmap <silent> <leader>s :set nolist!<CR>
 nmap <silent> <leader>t :!ctags --extra=+f --recurse=yes .<CR>
-set shortmess=atI
 
-"set ffs=mac,unix,dos
+set smarttab softtabstop=4 shiftwidth=4 ts=4
+set ignorecase smartcase smartindent showmatch
+set tags=./tags,tags,/
+set hidden
 set ffs=unix,dos,mac
+set scrolloff=3
+set shortmess=atI
+set guifont=Menlo\ Regular:h13
+set guioptions-=r
+set showcmd
+set incsearch
+set ruler
+set background=dark
+colorscheme solarized
+
