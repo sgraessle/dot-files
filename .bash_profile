@@ -8,6 +8,7 @@ export LC_CTYPE=en_US.UTF-8
 export MANPATH=/usr/local/man:${MANPATH}
 export PAGER=less
 export LESS="-iSx4 -FerX"
+export TRANSPORTER_HOME=`xcode-select --print-path`/../Applications/Application\\\ Loader.app/Contents/MacOS/itms/bin
 
 alias uuidgen='uuidgen | tr A-Z a-z'
 
