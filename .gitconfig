@@ -6,6 +6,7 @@
 	branch = auto
 	status = auto
 [alias]
+	lg = log --graph --oneline --decorate --all
 	llog = log --date=local
 	serve = !git daemon --reuseaddr --verbose --base-path=. --export-all ./.git
 [merge]
