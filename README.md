@@ -1,4 +1,10 @@
 dot-files
 =========
 
-G-g-g-generic config files I don't want to reproduce from memory.
+This is a @homesick 'castle' for a few config files.
+
+`
+gem install homesick
+homesick clone sgraessle/dot-files
+homesick link dot-files
+`
