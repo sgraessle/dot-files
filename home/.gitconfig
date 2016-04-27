@@ -21,4 +21,8 @@
 [diff]
 	tool = Kaleidoscope
 [core]
-	pager = less $LESS
+	pager = less
+[hub]
+	protocol = https
+[url "https://github.com/"]
+	insteadOf = git@github.com:
