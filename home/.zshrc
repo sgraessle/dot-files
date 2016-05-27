@@ -15,6 +15,8 @@ HELPDIR=/usr/local/share/zsh/help
 autoload -Uz compinit && compinit
 autoload -Uz promptinit && promptinit
 
+source /usr/local/share/zsh/site-functions/_aws
+
 # default to filename completion if all else fails
 zstyle ':completion:*' completer _complete _ignored _files
 

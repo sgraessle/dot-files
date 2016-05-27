@@ -14,5 +14,3 @@ export EDITOR=vim
 export LIQUIBASE_HOME=/usr/local/Cellar/liquibase/3.4.2/libexec
 
 eval "$(hub alias -s)"
-
-. dnvm.sh

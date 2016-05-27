@@ -8,3 +8,5 @@ fi
 shopt -s histappend
 
 export GOPATH=$HOME/work
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

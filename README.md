@@ -13,3 +13,5 @@ other stuff you may want on a new machine
 -----------------------------------------
 
 * OSX Terminal [solarized](https://github.com/tomislav/osx-terminal.app-colors-solarized.git)
+* Disable caps-lock in Keyboard System Prefs
+* Enable 3-finger drag in Accessibility Prefs
