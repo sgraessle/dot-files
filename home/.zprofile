@@ -4,7 +4,8 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-export PATH=/usr/local/bin:~/Library/Android/sdk/platform-tools:$PATH
+export PATH=/usr/local/bin:~/Library/Android/sdk/tools:~/Library/Android/sdk/platform-tools:$PATH
+export PATH=$PATH:~/bin/Zynga.Tools.Zpup2
 
 export TRANSPORTER_HOME=`xcode-select --print-path`/../Applications/Application\\\ Loader.app/Contents/MacOS/itms/bin
 export PAGER=less

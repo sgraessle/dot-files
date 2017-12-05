@@ -1,28 +1,41 @@
 [user]
-	email = scott@teamchaos.com
-	name = Scott Graessle
+    email = sgraessle@zynga.com
+    name = Scott Graessle
 [alias]
-	lg = log --graph --oneline --decorate --all
+    lg = log --graph --oneline --decorate --all
+    lga = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all
+    yd = !"f() { cd ${GIT_PREFIX:-.} && git ls-files --modified | yank -l | pbcopy;  git diff \"`pbpaste`\"; }; f"
+    s = status -sb
+    ls = log --oneline
+    cp = cherry-pick
+    ya = !"f() { git add \"`pbpaste`\"; }; f"
 [push]
-	default = simple
+    default = simple
 [credential]
-	helper = osxkeychain
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustexitcode = true
-[merge]
-	tool = Kaleidoscope
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[difftool]
-	prompt = false
+    helper = osxkeychain
+
+[mergetool "unityyamlmerge"]
+    trustExitCode = false
+    cmd = '/Applications/Unity/Unity.app/Contents/Tools/UnityYAMLMerge' merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
 [mergetool]
-	prompt = false
+    prompt = false
+[merge]
+    tool = unityyamlmerge
+
+[difftool "Kaleidoscope"]
+    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+    prompt = false
 [diff]
-	tool = Kaleidoscope
+    tool = Kaleidoscope
 [core]
-	pager = less
+    pager = less
 [hub]
-	protocol = https
+    protocol = https
+    host = github-ca.corp.zynga.com
 [url "https://github.com/"]
-	insteadOf = git@github.com:
+    insteadOf = git@github.com:
+[url "https://github-ca.corp.zynga.com/"]
+    insteadOf = git@github-ca.corp.zynga.com:
+[color]
+    ui = auto
