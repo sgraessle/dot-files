@@ -11,6 +11,7 @@ Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 Plug 'godlygeek/tabular'
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'milch/vim-fastlane'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 set autoindent incsearch hlsearch ignorecase smartcase ruler
