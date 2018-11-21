@@ -12,7 +12,7 @@
 [push]
     default = simple
 [credential]
-    helper = osxkeychain
+	helper = osxkeychain
 
 [mergetool "unityyamlmerge"]
     trustExitCode = false
